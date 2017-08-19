@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="创建li" id="btn"/>
+		<ul id="u">
+			<li>老虎</li>
+			<li>大象</li>
+			<li>狮子</li>
+			<li>熊大</li>
+			<li>熊二</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var btn = document.getElementById("btn");
+	var uls = document.getElementById("u")
+	btn.onclick = function  () {
+		var lis = document.createElement( "li" ) ;
+		uls.appendChild(lis)
+		lis.innerHTML = "1111";
+		
+		
+	}
+	uls.onmouseover = function  (e) {
+		
+	
+	     var target = e.target || e.srcElement;
+	     if ( target.tagName == "LI"   ) {
+	     	target.style.background  ="red";
+	     	
+	     	
+	     }
+	
+	
+	
+	
+	} 
+	
+	uls.onmouseout = function(evt){
+		var e = evt || event;
+		var target = e.target || e.srcElement;
+		if( target.nodeName =="LI" ){
+			target.style.background = "";
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
